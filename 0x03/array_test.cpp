@@ -1,16 +1,22 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-void insert(int idx, int num, int arr[], int& len){
+void insert(int idx, int num, int arr[], int& len){ 
+ 
+  for(int i=idx;i<len;i++)  arr[i+1]=arr[i];
+  arr[idx]=num;
+  len +=1;
 
 }
 
 void erase(int idx, int arr[], int& len){
-  
+  for(int i=idx;i<len-1;i++)  arr[i]=arr[i+1];
+  len -=1;
 }
 
 void printArr(int arr[], int& len){
-  for(int i = 0; i < len; i++) cout << arr[i] << ' ';
+  f
+    or(int i = 0; i < len; i++) cout << arr[i] << ' ';
   cout << "\n\n";
 }
 
